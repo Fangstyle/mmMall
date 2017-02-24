@@ -96,4 +96,17 @@
 .onsale{
     width: 100%;
 }
+.onsale ul{
+    width:100%;
+}
+.onsale ul li {
+    width: 100%;
+}
+.onsale .onsale_left{
+    width: 20%;
+}
+.onsale .onsale_right{
+    margin-left: 10%;
+    width: 70%
+}
 /*特价页面结束*/

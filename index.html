@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
+<body ng-app="myApp" ng-controller="indexController">
 <div class="mmm_style">
-<!--顶部-->
-    <header class="header_title" >
+    <!--顶部-->
+    <header class="header_title">
         <div class=" header_left f_left">
             <h1>慢慢买</h1>
             <a class="icon-sprit-logo" href="#"></a>
@@ -20,7 +20,7 @@
             <a class="icon-sprit-app" href="#"></a>
         </div>
     </header>
-<!--顶部结束-->
+    <!--顶部结束-->
     <section class="search">
         <form action="#" method="post">
             <input class="search_search" type="text" placeholder="seaching for?">
@@ -29,42 +29,10 @@
     </section>
     <!--分类菜单开始-->
     <section class="category">
-        <ul class="clearfix">
-            <li>
-                <img src="images/ic_kb.png">
-                <p>白菜价</p>
-            </li>
-            <li>
-                <img src="images/ic_kb.png">
-                <p>白菜价</p>
-            </li>
-            <li>
-                <img src="images/ic_kb.png">
-                <p>白菜价</p>
-            </li>
-            <li>
-                <img src="images/ic_kb.png">
-                <p>白菜价</p>
-            </li>
-            <li>
-                <img src="images/ic_kb.png">
-                <p>白菜价</p>
-            </li>
-            <li>
-                <img src="images/ic_kb.png">
-                <p>白菜价</p>
-            </li>
-            <li>
-                <img src="images/ic_kb.png">
-                <p>白菜价</p>
-            </li>
-            <li>
-                <img src="images/ic_kb.png">
-                <p>白菜价</p>
-            </li>
-            <li>
-                <img src="images/ic_kb.png">
-                <p>白菜价</p>
+        <ul class="clearfix" >
+            <li ng-repeat="item in categoryList">
+                <img ng-src="{{item.img}}">
+                <p>{{item.name}}</p>
             </li>
         </ul>
     </section>
@@ -75,9 +43,27 @@
             <!--<iframe src="images/arrow-right.svg "frameborder="0" width="10" height="10"  scrolling="no"/>-->
             <a href="#"></a>
         </div>
+        <ul>
+            <li>
+                <div class="onsale_item clearfix">
+                    <img class="onsale_left f_left" src="images/item_img.jpg" alt="">
+                    <div class="onsale_right f_left">
+                        <p class="onsale_title">威士忌-源于1989</p>
+                        <p class="onsale_price">￥12.5</p>
+                        <span class="onsale_from">京东商城</span>
+                        <span class="onsale_time">10-25 13:14</span>
+                        <i></i>
+                        <span class="onsale_say">有三人评论</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </section>
     <section class="rank"></section>
     <footer></footer>
 </div>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
