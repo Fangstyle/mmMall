@@ -1,0 +1,43 @@
+<div class="jumbotron">
+	<section class="search">
+		<form action="#" method="post">
+			<input class="search_search" type="text" placeholder="seaching for?">
+			<button class="search_commit" type="submit">搜索</button>
+		</form>
+	</section>
+	<!--分类菜单开始-->
+	<section class="category">
+		<ul class="clearfix" >
+			<li ng-repeat="item in categoryList">
+				<a ui-sref="category">
+					<img ng-src="{{item.img}}">
+					<p>{{item.name}}</p>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!--分类菜单结束-->
+	<section class="onsale">
+		<div class="devided_part">
+			<h3>超值折扣推荐</h3>
+			<!--<iframe src="images/arrow-right.svg "frameborder="0" width="10" height="10"  scrolling="no"/>-->
+			<a href="#"></a>
+		</div>
+		<ul>
+			<li ng-repeat="items in mianList">
+				<div class="onsale_item clearfix">
+					<img class="onsale_left f_left" src="images/item_img.jpg" alt="{{items.productName}}">
+					<div class="onsale_right f_left">
+						<p class="onsale_title">{{items.productName}}</p>
+						<p class="onsale_price">{{items.productPinkage}}</p>
+						<span class="onsale_from">{{items.productFrom}}</span>
+						<span class="onsale_time">{{items.productTime}}</span>
+						<i></i>
+						<span class="onsale_say">{{items.productComCount}}</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<section class="rank"></section>
+</div>
