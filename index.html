@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body ng-app="myApp" ng-controller="indexController">
+<body ng-controller="indexController">
 <div class="mmm_style">
     <!--顶部-->
     <header class="header_title">
@@ -31,8 +32,10 @@
     <section class="category">
         <ul class="clearfix" >
             <li ng-repeat="item in categoryList">
-                <img ng-src="{{item.img}}">
-                <p>{{item.name}}</p>
+                <a ui-sref="category">
+                    <img ng-src="{{item.img}}">
+                    <p>{{item.name}}</p>
+                </a>
             </li>
         </ul>
     </section>
@@ -44,26 +47,34 @@
             <a href="#"></a>
         </div>
         <ul>
-            <li>
+            <li ng-repeat="items in mianList">
                 <div class="onsale_item clearfix">
-                    <img class="onsale_left f_left" src="images/item_img.jpg" alt="">
+                    <img class="onsale_left f_left" src="images/item_img.jpg" alt="{{items.productName}}">
                     <div class="onsale_right f_left">
-                        <p class="onsale_title">威士忌-源于1989</p>
-                        <p class="onsale_price">￥12.5</p>
-                        <span class="onsale_from">京东商城</span>
-                        <span class="onsale_time">10-25 13:14</span>
+                        <p class="onsale_title">{{items.productName}}</p>
+                        <p class="onsale_price">{{items.productPinkage}}</p>
+                        <span class="onsale_from">{{items.productFrom}}</span>
+                        <span class="onsale_time">{{items.productTime}}</span>
                         <i></i>
-                        <span class="onsale_say">有三人评论</span>
+                        <span class="onsale_say">{{items.productComCount}}</span>
                     </div>
                 </div>
             </li>
         </ul>
     </section>
     <section class="rank"></section>
+    <div class="ng-view">
+        <!--此处为ng-view  路由适配下的窗体内容-->
+    </div>
+    <div ui-view>
+        <!--此处为ui-view  ui-router路由适配下的窗体内容-->
+    </div>
     <footer></footer>
 </div>
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-route/angular-route.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="category/controller.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
