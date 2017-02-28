@@ -1,3 +1,5 @@
-<div class="jumbotron">
-	<h2>category</h2>
+<div class="category-menu clearfix" ng-repeat="item in categoryList" ng-app="ngAnimate">
+	<a ng-click="showItem(item.titleId)"><h3 class="category-menu-sum" >{{item.title+item.titleId}}<i class="iconfont icon-xia"></i></h3></a>
+	<ul id ="{{'category_item_'+item.titleId}}" class="category-detail">
+	</ul>
 </div>

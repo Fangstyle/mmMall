@@ -18,7 +18,9 @@
   "homepage": "https://github.com/Fangstyle/mmMall#readme",
   "dependencies": {
     "angular": "^1.6.2",
+    "angular-animate": "^1.6.2",
     "angular-route": "^1.6.2",
-    "angular-ui-router": "^0.4.2"
+    "angular-ui-router": "^0.4.2",
+    "jquery": "^3.1.1"
   }
 }

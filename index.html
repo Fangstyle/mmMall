@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/category.css">
 </head>
-<body>
+<body ng-controller="mainController">
 <div class="mmm_style">
     <!--顶部-->
     <header class="header_title">
         <div class=" header_left f_left">
             <h1>慢慢买</h1>
-            <a class="icon-sprit-logo" href="#"></a>
+            <a class="icon-sprit-logo" ui-sref="index"></a>
         </div>
         <div class=" header_right f_right">
             <a class="icon-sprit-app" href="#"></a>
@@ -23,17 +24,31 @@
     </header>
     <!--顶部结束-->
 
-    <div class="ng-view">
-        <!--此处为ng-view  路由适配下的窗体内容-->
-    </div>
+<!--    <div class="ng-view">
+        &lt;!&ndash;此处为ng-view  路由适配下的窗体内容&ndash;&gt;
+    </div>-->
     <div ui-view>
         <!--此处为ui-view  ui-router路由适配下的窗体内容-->
     </div>
-    <footer></footer>
+
+    <!--底部开始-->
+        <footer class="mmm_footer">
+            <div class="message">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a id="back" ng-click="toTop()"><i class="iconfont icon-CombinedShapeCopy"></i>返回顶部</a>
+            </div>
+            <p><a href="http://m.manmanbuy.com/?o=download" class="app">手机APP下载</a><a href="index.html"> 慢慢买手机版 -- </a><span
+                    class="stage">掌上比价平台</span></p>
+            <p><a href="index.html">m.manmanbuy.com</a></p>
+    </footer>
 </div>
+<script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-route/angular-route.js"></script>
+<script src="components/httpServer.js"></script>
 <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="node_modules/angular-animate/angular-animate.js"></script>
 <script src="index/controller.js"></script>
 <script src="category/controller.js"></script>
 <script src="app.js"></script>

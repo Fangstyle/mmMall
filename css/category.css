@@ -1,0 +1,56 @@
+.category-menu{
+    width: 100%;
+}
+.category-menu h3{
+    background-color: #c6c6c6;
+    color: #666666;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 5px;
+    border-bottom: 2px solid #d8d8d8;
+    position: relative;
+}
+.category-menu ul {
+    width: 100%;
+    text-align:center;
+    background-color: #F9F9F9;
+}
+.category-menu ul li {
+    width: 33.3%;
+    height: 30px;
+    float: left;
+    line-height: 30px;
+    border-right: 2px solid #d8d8d8;
+    border-bottom: 2px solid #d8d8d8;
+    background-color: #ffffff;
+    text-align: center;
+}
+.category-menu ul li:nth-child(3n){
+    border-right: 0;
+}
+.category-menu h3 i {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 24px;
+    height: 15px;
+    margin-top: -7px;
+    background: url("../images/icon_bar.png") -350px 0 no-repeat;
+}
+.category-menu h3 i:hover {
+    color: #FF841D;
+}
+.category-menu h3:focus{
+}
+.ng-show {
+    height: 100px;
+    width: 100%;
+    background-color: transparent;
+}
+.ng-hide{
+    height: 0px;
+    width: 100%;
+    background-color: transparent;
+}
+
